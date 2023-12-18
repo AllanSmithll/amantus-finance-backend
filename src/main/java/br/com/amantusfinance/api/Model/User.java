@@ -8,22 +8,17 @@ import lombok.NoArgsConstructor;
 import java.sql.Date;
 
 @Entity
-@Table(name = "tb_income")
+@Table(name = "tb_user")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Income {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String description;
-    private Double value;
-    private Date date;
-    private String category;
-    private String frequency;
-    private String origin;
-    @Column(nullable = true)
-    private String add_information;
+    private String email;
+    private String password;
+    private String name;
+    private Date birthdate;
 
 }

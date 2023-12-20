@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_user")
@@ -20,5 +21,10 @@ public class User {
     private String password;
     private String name;
     private Date birthdate;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Income> incomes;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Expense> expenses;
 
 }

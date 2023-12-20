@@ -14,7 +14,7 @@ public class ExpenseController {
     private ExpenseService expenseService;
 
     @GetMapping("/expenses")
-    public List<Expense> getUsuarios() {
+    public List<Expense> getExpenses() {
         return this.expenseService.getExpenses();
     }
 

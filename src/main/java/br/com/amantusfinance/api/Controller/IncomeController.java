@@ -14,7 +14,7 @@ public class IncomeController {
     private IncomeService incomeService;
 
     @GetMapping("/incomes")
-    public List<Income> getUsuarios() {
+    public List<Income> getIncomes() {
         return this.incomeService.getIncomes();
     }
 

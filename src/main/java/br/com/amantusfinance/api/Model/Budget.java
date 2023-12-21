@@ -18,8 +18,9 @@ public class Budget {
     private Long id;
 
     private String description;
-    private Double value;
-    private Date date;
+    private Double value_total;
+    private Double value_missing;
+    private Date date_creation;
+    private Date date_expiration;
     private String type;
-    private String expense_category;
 }

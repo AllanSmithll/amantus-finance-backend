@@ -10,8 +10,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 public class BudgetController {
-    @Autowired
-    private BudgetService budgetService;
+    private final BudgetService budgetService;
+
+    public BudgetController(BudgetService budgetService) {
+        this.budgetService = budgetService;
+    }
 
     @GetMapping("/budgets")
     public List<Budget> getBudgets() {

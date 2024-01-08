@@ -23,7 +23,7 @@ public abstract class Transaction {
     @Column(nullable = true)
     private String add_information;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User user;
+//    @ManyToOne(fetch = FetchType.EAGER)
+//    @JoinColumn(name = "user_id")
+//    private User user;
 }

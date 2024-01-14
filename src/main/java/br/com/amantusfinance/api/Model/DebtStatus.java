@@ -1,6 +1,6 @@
 package br.com.amantusfinance.api.Model;
 
-public enum DebyStatus {
+public enum DebtStatus {
     PAID,
     PENDING,
     CANCELED,

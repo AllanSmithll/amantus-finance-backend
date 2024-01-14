@@ -16,16 +16,17 @@ public class Debt {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String debtor_name;
-    private Double debt_value;
-    private Double debt_value_pending;
-    private DebtType debt_type;
+    private String creditor_name;
+    private Double value;
+    private Double value_pending;
+    private DebtType type;
     @Column(nullable = true)
-    private Double interest_rates_tax;
-    private Double debt_penalties;
-    private Date debt_date;
-    private Date debt_expiration;
-    private DebyStatus debt_status;
+    private Double interest_rates_tax = 0.00;
     @Column(nullable = true)
-    private String contact_information;
+    private Double penalties = 0.00;
+    private Date date;
+    private Date date_expiration;
+    private DebtStatus status;
+    @Column(nullable = true)
+    private String contact_information = "";
 }

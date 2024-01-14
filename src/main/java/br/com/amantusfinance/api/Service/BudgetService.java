@@ -10,8 +10,11 @@ import java.util.List;
 
 @Service
 public class BudgetService {
-    @Autowired
-    private BudgetRepository budgetRepository;
+    private final BudgetRepository budgetRepository;
+
+    public BudgetService(BudgetRepository budgetRepository) {
+        this.budgetRepository = budgetRepository;
+    }
 
     public List<Budget> getBudgets() {
         return this.budgetRepository.findAll();

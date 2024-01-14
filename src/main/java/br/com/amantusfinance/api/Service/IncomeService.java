@@ -10,8 +10,11 @@ import java.util.List;
 
 @Service
 public class IncomeService {
-    @Autowired
-    private IncomeRepository incomeRepository;
+    private final IncomeRepository incomeRepository;
+
+    public IncomeService(IncomeRepository incomeRepository) {
+        this.incomeRepository = incomeRepository;
+    }
 
     public List<Income> getIncomes() {
         return this.incomeRepository.findAll();

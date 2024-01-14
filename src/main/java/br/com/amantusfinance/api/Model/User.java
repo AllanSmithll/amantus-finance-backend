@@ -22,9 +22,9 @@ public class User {
     private String name;
     private Date birthdate;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Income> incomes;
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Expense> expenses;
+//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+//    private List<Income> incomes;
+//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+//    private List<Expense> expenses;
 
 }
